@@ -36,7 +36,9 @@ async function networkFirst(request) {
 
 self.addEventListener('fetch', (event) => {
   const { request } = event
-  if (request.method !== 'GET' || new URL(request.url).origin !== self.location.origin) return
+  const url = new URL(request.url)
+  // The page's "is there a new version?" check must reach the network and must not pile up in the cache.
+  if (request.method !== 'GET' || url.origin !== self.location.origin || url.searchParams.has('update')) return
   event.respondWith(request.url.includes('/assets/') ? cacheFirst(request) : networkFirst(request))
 })
 
