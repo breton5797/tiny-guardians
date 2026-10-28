@@ -1,0 +1,10 @@
+{
+  "ads_enabled": true,
+  "rewarded_enabled": true,
+  "interstitial_enabled": true,
+  "interstitial_min_interval_seconds": 180,
+  "interstitial_every_n_rounds": 3,
+  "interstitial_max_per_session": 4,
+  "new_user_ad_grace_seconds": 180,
+  "rewarded_daily_limit": 20
+}
