@@ -24,9 +24,19 @@ async function cacheFirst(request) {
   return (await caches.match(request, MATCH)) ?? store(request, await fetch(request))
 }
 
+// On a connection that is up but stalled, a returning player gets the cached page after this long instead of a blank screen.
+const NETWORK_WAIT_MS = 3000
+
 async function networkFirst(request) {
+  // The fetch keeps going after a fallback, so a late answer still refreshes the cache for the next visit.
+  const fresh = fetch(request).then((response) => store(request, response))
+  fresh.catch(() => undefined) // a failure after the fallback was served is not an error
+  const late = new Promise((resolve) => self.setTimeout(resolve, NETWORK_WAIT_MS, null))
   try {
-    return await store(request, await fetch(request))
+    const first = await Promise.race([fresh, late])
+    if (first) return first
+    const cached = await caches.match(request, MATCH)
+    return cached ?? (await fresh)
   } catch (error) {
     const cached = await caches.match(request, MATCH)
     if (cached) return cached

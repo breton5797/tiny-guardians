@@ -3,6 +3,7 @@
   "short_name": "타이니 가디언즈",
   "description": "한 손으로 움직이고, 합치고, 막아라! 머지 디펜스 아케이드",
   "lang": "ko",
+  "id": "./",
   "start_url": ".",
   "scope": ".",
   "display": "fullscreen",
