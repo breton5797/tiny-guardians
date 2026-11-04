@@ -35,7 +35,7 @@
       <table>
         <tr><th>상황</th><th>전달되는 정보</th><th>받는 곳</th><th>목적</th></tr>
         <tr><td>게임 접속(웹), 앱에서 약관·안내 페이지 열기</td><td>IP 주소, 브라우저·기기 정보(접속 기록)</td><td>GitHub Pages (GitHub, Inc., 미국)</td><td>게임 파일·설정 전송</td></tr>
-        <tr><td>2인 협동</td><td>IP 주소, 무작위 연결 번호, 방 코드</td><td>PeerJS 연결 서버(0.peerjs.com)와 중계 서버, Google STUN 서버, 함께 하는 상대방 기기</td><td>두 기기를 직접 연결</td></tr>
+        <tr><td>2인 협동</td><td>IP 주소, 무작위 연결 번호, 방 코드</td><td>PeerJS 연결 서버(0.peerjs.com), Google STUN 서버, 함께 하는 상대방 기기. 통신망이 직접 연결을 막을 때만 Metered 중계 서버(metered.ca)가 두 기기 사이의 게임 데이터를 그대로 전달(내용은 암호화되어 중계 서버가 읽을 수 없음)</td><td>두 기기를 연결</td></tr>
         <tr><td>오류 보고(운영자가 켠 경우)</td><td>오류 내용, 브라우저·기기 종류, 게임 버전. IP 주소는 저장하지 않도록 설정</td><td>Sentry (Functional Software, Inc., 미국)</td><td>오류를 찾아 고치기</td></tr>
       </table>
       <p>게임 기록은 기기 안(브라우저·앱 저장소)에만 있고 운영자에게 전송되지 않습니다. 협동 플레이에서는 게임 진행에 필요한 조작 정보만 상대방 기기와 주고받습니다. 현재 버전의 웹과 앱(iOS·Android)에는 광고가 없어 광고 식별자나 광고 기록을 처리하지 않으며, 광고를 넣게 되면 시작하기 전에 이 방침을 고쳐 알립니다.</p>
@@ -66,6 +66,7 @@
       <h2 id="changes">변경 이력</h2>
       <table>
         <tr><th>날짜</th><th>바뀐 내용</th></tr>
+        <tr><td>2026-11-05</td><td>2인 협동의 중계 서버로 Metered(metered.ca)를 추가: 직접 연결이 안 되는 통신망에서만 쓰임</td></tr>
         <tr><td>2026-11-05</td><td>개인정보 보호 책임자 연락처를 minimalkorea@naver.com으로 변경</td></tr>
         <tr><td>2026-11-05</td><td>이용약관을 <a href="./terms.html">별도 페이지</a>로 옮김, 광고 없이 출시한 앱 1.0에 맞춰 Google AdMob 항목과 맞춤형 광고 안내를 뺌, 영웅 그림 출처(Ludo AI) 고지 추가</td></tr>
         <tr><td>2026-11-02</td><td>사용한 글꼴(주아·갈무리)과 배경음악 출처 고지, 앱이 GitHub Pages에서 설정·약관을 불러온다는 점 추가, 변경 이력 추가</td></tr>
