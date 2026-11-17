@@ -35,6 +35,7 @@
       <table>
         <tr><th>상황</th><th>전달되는 정보</th><th>받는 곳</th><th>목적</th></tr>
         <tr><td>게임 접속(웹), 앱에서 약관·안내 페이지 열기</td><td>IP 주소, 브라우저·기기 정보(접속 기록)</td><td>GitHub Pages (GitHub, Inc., 미국)</td><td>게임 파일·설정 전송</td></tr>
+        <tr><td>게임 접속(웹, worldtree.norion.co.kr)</td><td>IP 주소, 브라우저·기기 정보(접속 기록). 방문 통계는 쿠키 없이 페이지 방문 수·유입 경로·기기 종류를 합계로만 집계하며 개인을 식별하지 않음</td><td>Cloudflare Pages·Web Analytics (Cloudflare, Inc., 미국)</td><td>게임 파일 전송, 방문 통계</td></tr>
         <tr><td>2인 협동</td><td>IP 주소, 무작위 연결 번호, 방 코드</td><td>PeerJS 연결 서버(0.peerjs.com), Google STUN 서버, 함께 하는 상대방 기기. 통신망이 직접 연결을 막을 때만 Metered 중계 서버(metered.ca)가 두 기기 사이의 게임 데이터를 그대로 전달(내용은 암호화되어 중계 서버가 읽을 수 없음)</td><td>두 기기를 연결</td></tr>
         <tr><td>오류 보고(운영자가 켠 경우)</td><td>오류 내용, 브라우저·기기 종류, 게임 버전. IP 주소는 저장하지 않도록 설정</td><td>Sentry (Functional Software, Inc., 미국)</td><td>오류를 찾아 고치기</td></tr>
       </table>
@@ -68,6 +69,7 @@
       <h2 id="changes">변경 이력</h2>
       <table>
         <tr><th>날짜</th><th>바뀐 내용</th></tr>
+        <tr><td>2026-11-18</td><td>웹 게임 새 주소(worldtree.norion.co.kr)와 그 주소의 쿠키 없는 방문 통계(Cloudflare Web Analytics) 추가. 스토어 앱은 방문 통계를 쓰지 않음</td></tr>
         <tr><td>2026-11-07</td><td>게임 이름을 "타이니 가디언즈"에서 "세계수 지킴이"로 변경. 오픈소스 고지(라이선스 전문) 페이지 추가, 도트 화면 그림 출처(Higgsfield AI) 고지 추가</td></tr>
         <tr><td>2026-11-05</td><td>2인 협동의 중계 서버로 Metered(metered.ca)를 추가: 직접 연결이 안 되는 통신망에서만 쓰임</td></tr>
         <tr><td>2026-11-05</td><td>개인정보 보호 책임자 연락처를 minimalkorea@naver.com으로 변경</td></tr>
