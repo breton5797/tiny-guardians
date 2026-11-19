@@ -1,5 +1,5 @@
 {
-  "ads_enabled": true,
+  "ads_enabled": false,
   "rewarded_enabled": true,
   "interstitial_enabled": true,
   "interstitial_min_interval_seconds": 180,
